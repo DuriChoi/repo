@@ -1,8 +1,8 @@
-CC	= g++ 
+CC	= gcc 
 CFLAGS	= -W -Wall -O2
 LDFLAGS	= -lm
 
-mac : mac.cpp 
+mac : mac.c 
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 clean : 
