@@ -1,10 +1,11 @@
 #include <stdio.h>
 //#pragma pack(1)
 struct Size{
-//	char c;
-	long long lla;
-	int b;
 	char c;
+	int a;
+	long long lla;
+//	int b;
+//	char c;
 } Size;
 // __attribute__((packed)) Size;
 
