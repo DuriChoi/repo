@@ -1,8 +1,8 @@
 SRC=main.cpp
-SRC+=base.cpp
-SRC+=mp3.cpp
-SRC+=cdisk.cpp
-
+SRC+=common.cpp
+SRC+=mp3p.cpp
+SRC+=lpp.cpp
+SRC+=cdp.cpp
 #CFLAGS+=-DCONSTRUCTOR
 
 main : $(SRC)
