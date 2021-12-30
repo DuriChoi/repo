@@ -9,6 +9,7 @@ class Common{
 		int play();
 		int pause();
 		int stop();
+        int player();
 };
 
 #endif

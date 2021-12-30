@@ -12,5 +12,6 @@ class CDp : public Common{
 		int pause();
 		int volUp();
 		int volDown();
+        int player();
 };
 #endif

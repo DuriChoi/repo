@@ -35,3 +35,9 @@ int CDp::volDown(){
 	printf("CDp - volDown()\n");
 	return 5;
 }
+int CDp::player(){
+    printf("노래 재생: p, 노래 정지: s, 노래 일시정지: a, 볼륨업: u, 볼륨다운, d, 플레이어 선택: q\n");
+    printf("input: ");
+    
+    return 0;
+}
