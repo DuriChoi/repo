@@ -1,9 +1,7 @@
 #include <stdio.h>
 
-void lovecall();
-
 char *getname(){
-	char name[128];
+	static char name[128];
 	printf("Input Name: ");
 	scanf("%s", name);
 		
@@ -11,11 +9,8 @@ char *getname(){
 }
 
 int main(){
-	char *str;
-
-	str = getname();
-	printf("I like you.\n");
-	printf("%s\n", str);
+	char *str = getname();
+	printf("%s, I like you.\n", str);
 	//lovecall();
 
 	return 0;
