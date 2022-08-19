@@ -1,17 +1,28 @@
 #include <iostream>
-#include <cmath>
-
+#include <math.h>
 using namespace std;
 
+void pita_Func(int c);
+
+static int c = 0;
+
 int main(){
-	int a = 1;
-	int b = 1;
-	int c = 1;
-
-	for(int i = 1; i < 100; i++){
-		for(int j = 1; j <100	
-
-	cout << a << endl;
+	for(c = 1; c<=500; c++){
+		pita_Func(c);
+	}
 
 	return 0;
+}
+
+void pita_Func(int c){
+	for(int a = 3; a<500; a++){
+		for(int b = 4; b<500; b++){
+			if(pow(c,2) == pow(a,2) + pow(b,2) && a+b+c == 1000 && a<b){
+				cout << "a: " << a << endl;	
+				cout << "b: " << b << endl;	
+				cout << "c: " << c << endl;	
+				cout << "a * b * c = " << a*b*c << endl;	
+			}
+		}
+	}
 }
