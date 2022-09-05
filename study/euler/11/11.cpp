@@ -11,7 +11,9 @@ int main(){
 	long int v_max = 1;
 	long int d_temp = 1;
 	long int d_max = 1;
-
+	long int rd_temp = 1;
+	long int rd_max = 1;
+	long int result = 1;
 	string num = "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08";
 	num = num.append(" 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00");
 	num = num.append(" 81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65");
@@ -41,26 +43,62 @@ int main(){
 			cnt+=3;
 		}
 	}
-
+//	printf("Horizon\n");
 	for(int i = 0; i < 20; i++){
-		for(int j = 0; j < 16; j++){
-			h_temp = a[i][j] * a[i][j+1] * a[i][j+2] * a[i][j+3] * a[i][j+4]; 
+		for(int j = 0; j < 17; j++){
+			h_temp = a[i][j] * a[i][j+1] * a[i][j+2] * a[i][j+3] ; 	
 			if(h_max < h_temp){
 				h_max = h_temp;
 			}
 		}
 	}
-
+//	printf("Vertical\n");
 	for(int i = 0; i < 20; i++){
-		for(int j = 0; j < 16; j++){
-			v_temp = a[j][i] * a[j+1][i] * a[j+2][i] * a[j+3][i] * a[j+4][i]; 
+		for(int j = 0; j < 17; j++){
+			v_temp = a[j][i] * a[j+1][i] * a[j+2][i] * a[j+3][i] ; 
 			if(v_max < v_temp){
 				v_max = v_temp;
 			}
 		}
 	}
+//	printf("Diagonal\n");
+	for(int i = 0; i < 17; i++){
+		for(int j = 0; j < 17; j++){
+			d_temp = a[j][i] * a[j+1][i+1] * a[j+2][i+2] * a[j+3][i+3] ; 
+			if(d_max < d_temp){
+				d_max = d_temp;
+			}
+		}
+	}
+//	printf("Reverse Diagonal\n");
+	for(int i = 19; i > 2; i--){
+		for(int j = 0; j < 17; j++){
+			rd_temp = a[i][j] * a[i-1][j+1] * a[i-2][j+2] * a[i-3][j+3] ; 
+			if(rd_max < rd_temp){
+				rd_max = rd_temp;
+			}
+		}
+	}
+	cout << "Horizon_Max: ";
 	cout << h_max << endl;
+	cout << "Vertical_Max: ";
 	cout << v_max << endl;
+	cout << "Diagonal_Max: ";
+	cout << d_max << endl;
+	cout << "Reverse Diagonal_Max: ";
+	cout << rd_max << endl;
+
+	cout << "Result: ";
+	if(result < h_max)
+		result = h_max;
+	if(result < v_max)
+		result = v_max;
+	if(result < d_max)
+		result = d_max;
+	if(result < rd_max)
+		result = rd_max;
+	
+	cout << result << endl;
 	
 	return 0;
 }

@@ -113,7 +113,7 @@ int main()
             Err_exit("close error");
     }
 }
-/*
+
 void sig_chld(int signo)
 {
     pid_t pid;
@@ -121,7 +121,7 @@ void sig_chld(int signo)
     while ( (pid = waitpid(-1, &stat, WNOHANG)) > 0)
         printf("child %d terminated\n", pid);
     return;
-}*/
+}
 
 void str_echo(int sockfd)
 {
@@ -140,7 +140,6 @@ void str_echo(int sockfd)
             printf("str_echo: read error\n");
             exit(1);
         }
-
 }
 
 ssize_t writen(int fd, const void *vptr, size_t n)
