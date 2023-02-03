@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/4.dir/4.cpp.o -o 4 
